@@ -1,0 +1,34 @@
+package iostreamdemo;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.FileInputStream;
+
+public class RainfallApp {
+    private RainfallData rainfallData;
+
+    public RainfallApp() {
+        rainfallData = new RainfallData("Simpang Ampat, Alor Gajah");
+    }
+
+    public void displayData() {
+        System.out.println("Station: " + rainfallData.getStationName());
+        System.out.println("Rainfall Data for 6 days:");
+
+        for (int i = 0; i < 6; i++) {
+            System.out.println("Day " + (i + 1) + ": " + rainfallData.rainfallData[i]);
+        }
+        
+        System.out.print("Average Rainfall in 6 Days : ");
+        System.out.printf("%.1f", rainfallData.getAverage());
+    }
+
+    public static void main(String[] args) {
+        try (DataInputStream dataInputStream = new DataInputStream(new FileInputStream("SimpangAmpat_AG.txt"))) {
+            RainfallApp rainfallApp = new RainfallApp();
+            rainfallApp.rainfallData.extractData(dataInputStream);
+            rainfallApp.displayData();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
