@@ -1,0 +1,43 @@
+package iostreamdemo;
+
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class TaskD {
+	
+	
+	public static void main (String args[]) throws IOException {
+	
+		float value[];
+		value = new float[6];
+		
+		
+		String filename = "SimpangAmpat_AG.txt";
+		
+		try {
+			DataInputStream dataInputStream = new DataInputStream (new FileInputStream ("SimpangAmpat_AG.txt"));
+			
+			System.out.println("Input From " + filename + "\n"); 
+		
+			
+			
+			
+			 for (int i = 0; i < 6; i++)
+			{
+				value[i]=dataInputStream.readFloat();
+				System.out.println(value[i]);
+				
+			}
+			
+			dataInputStream.close();
+
+	}catch (IOException e) {
+	                e.printStackTrace();
+	                
+	    }
+	    	System.out.println("End of program...."); 
+    	
+	}
+
+}
