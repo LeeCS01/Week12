@@ -1,0 +1,100 @@
+package iostreamdemo;
+
+import java.io.*;
+
+public class StationHub{
+	
+    public static void main(String[]args) throws IOException{
+        
+    	String targetStorage = "MLKhub.txt";
+        
+    	try { 
+        	DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(targetStorage));
+        
+            
+        	dataOutputStream.writeUTF("2421003");
+        	dataOutputStream.writeUTF("SIMPANG AMPAT");
+        	dataOutputStream.writeUTF("ALOR GAJAH");
+        	dataOutputStream.writeFloat(4.0F);
+        	dataOutputStream.writeFloat(1.0F);
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(6.0F);
+        	dataOutputStream.writeFloat(19.0F);
+        	dataOutputStream.writeFloat(1.5F);
+        	//dataOutputStream.flush();
+        	dataOutputStream.writeUTF("2222002");
+        	dataOutputStream.writeUTF("DURIAN TUNGGAL");
+        	dataOutputStream.writeUTF("ALOR GAJAH");
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(37.0F);
+        	dataOutputStream.writeFloat(6.0F);
+        	dataOutputStream.writeFloat(9.0F);
+        	
+        	
+        	dataOutputStream.writeUTF("2324033");
+        	dataOutputStream.writeUTF("HOSPITAL JASIN");
+        	dataOutputStream.writeUTF("JASIN");
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(14.0F);
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(11.0F);
+        	dataOutputStream.writeFloat(15.0F);
+        	dataOutputStream.writeFloat(31.0F);
+        	
+        	
+        	dataOutputStream.writeUTF("2125002");
+        	dataOutputStream.writeUTF("TELOK RIMBA");
+        	dataOutputStream.writeUTF("JASIN");
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(1.0F);
+        	dataOutputStream.writeFloat(1.0F);
+        	dataOutputStream.writeFloat(69.0F);
+        	dataOutputStream.writeFloat(53.0F);
+        	dataOutputStream.writeFloat(4.0F);
+        
+        	
+        	dataOutputStream.writeUTF("2222033");
+        	dataOutputStream.writeUTF("BATU HAMPAR");
+        	dataOutputStream.writeUTF("MELAKA TENGAH");
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(2.5F);
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(30.0F);
+        	dataOutputStream.writeFloat(11.5F);
+        	dataOutputStream.writeFloat(22.0F);
+        
+        	
+        	dataOutputStream.writeUTF("2222005");
+        	dataOutputStream.writeUTF("KLEBANG BESAR D/S");
+        	dataOutputStream.writeUTF("MELAKA TENGAH");
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(14.0F);
+        	dataOutputStream.writeFloat(0.0F);
+        	dataOutputStream.writeFloat(75.5F);
+        	dataOutputStream.writeFloat(25.5F);
+        	dataOutputStream.writeFloat(20.5F);
+        
+        	
+        	dataOutputStream.close();
+        
+        	} catch (IOException e) {
+                e.printStackTrace();
+                
+        	}
+    	System.out.println("End of program.  Check out " + targetStorage + "."); 
+    	
+    }
+    
+}
+    
+    					
+
+  
+
+
+
+   
+    
+    
