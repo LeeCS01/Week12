@@ -1,0 +1,46 @@
+package iostreamdemo;
+
+import java.io.*;
+
+public class TaskB{
+	
+    public static void main(String[]args) throws IOException{
+        
+    	String targetStorage = "SimpangAmpat_AG.txt";
+        
+    	try { 
+        	DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(targetStorage));
+        
+            
+        	
+        	dataOutputStream.writeFloat(3.5F);
+        	dataOutputStream.writeFloat(2.1F);
+        	dataOutputStream.writeFloat(0.8F);
+        	dataOutputStream.writeFloat(1.2F);
+        	dataOutputStream.writeFloat(4.0F);
+        	dataOutputStream.writeFloat(2.5F);
+        	
+        	
+        	//dataOutputStream.flush();
+        	
+        	dataOutputStream.close();
+        
+        	} catch (IOException e) {
+                e.printStackTrace();
+                
+        	}
+    	System.out.println("End of program.  Check out " + targetStorage + "."); 
+    	
+    }
+    
+}
+    
+    					
+
+  
+
+
+
+   
+    
+    
